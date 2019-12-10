@@ -3,8 +3,8 @@ A less pager with additional syntax highlighting
 
 ----
 
-`gless` is a simple bash script which can be used wherever in place of the `less` pager, providing additional syntax highlighting, 
-as provided by the python-pygments package (and the `pygmentize` command in particular).
+`gless` is a simple bash script which can be used wherever one would use the `less` pager, but also providing additional 
+syntax highlighting as provided by the python-pygments package (and the `pygmentize` command in particular).
 
 Depends on the python pygments package which can be installed via your distribution or via pip.
 
