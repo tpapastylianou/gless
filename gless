@@ -1,2 +1,2 @@
 #!/bin/bash
-pygmentize -g "$*" | less -R
+pygmentize -g "$@" | less -R
