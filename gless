@@ -1,3 +1,2 @@
 #!/bin/bash
-pygmentize -g $1 | less -R
-
+pygmentize -g "$*" | less -R
