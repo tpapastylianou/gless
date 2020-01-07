@@ -1,2 +1,14 @@
 #!/bin/bash
-pygmentize -g "$@" | less -R
+case $@  in
+-h | --help)
+    echo "Usage:"
+    echo "    gless [valid pygmentize options] <filename>"
+    echo
+    echo "Alternatively, can be used in pipe mode, e.g.:"
+    echo "    cat <filename> | gless [valid pygmentize options]" 
+    ;;
+
+*)
+    pygmentize -g "$@" | less -R
+    ;;
+esac
