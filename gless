@@ -1,11 +1,17 @@
 #!/bin/bash
 case $@  in
 -h | --help)
+    echo "'gless' is a simple bash script which can be used wherever one would use the 'less' pager,"
+    echo "but also providing additional syntax highlighting as provided by the 'python-pygments' package."
+    echo
     echo "Usage:"
-    echo "    gless [valid pygmentize options] <filename>"
+    echo "    gless [valid 'pygmentize' options] <filename>"
     echo
     echo "Alternatively, can be used in pipe mode, e.g.:"
-    echo "    cat <filename> | gless [valid pygmentize options]" 
+    echo "    cat <filename> | gless [valid 'pygmentize' options]" 
+    echo
+    echo "Options to the 'less' pager provided via the 'LESS' bash variable will be honoured."
+    echo
     ;;
 
 *)

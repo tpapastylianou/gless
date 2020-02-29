@@ -35,12 +35,13 @@ Basic use:
 
     gless mymodule.py
 
+
 Basic pipe use:
 
     cat mymodule.py | gless
 
 
-Use with additional options, specifying an explicit lexer (python) and style (fruity)
+Use with additional options, specifying an explicit lexer (python) and style (fruity):
 
     gless -lpython -O style=fruity my_executable_python_script
 
@@ -78,5 +79,10 @@ The 'native' colour-scheme is particularly useful for `svn diff` outputs (unlike
         pygmentize -g -O style=fruity "$@" | less -R
 
     A list of available pygments styles can be found in your pygments installation directory (e.g. `/usr/local/lib/python3.6/dist-packages/pygments/styles` )
+
+- If one also wants to pass options to the underlying 'less' pager, rather than just to pygmentize, the way to do this is via the LESS bash variable.  
+  E.g. to call 'less' with the '-N' (i.e. show line numbers) switch enabled, one can call gless like so:
+
+    LESS='-N' gless [valid pygmentize options] <filename>
 
 
